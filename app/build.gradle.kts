@@ -47,7 +47,7 @@ android {
 }
 
 dependencies {
-    //implementation(project(":testsdk1:app"))
+    implementation(project(":testsdk1"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.22")
     implementation("androidx.core:core-ktx:1.10.1")
 
