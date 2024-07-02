@@ -1,3 +1,4 @@
 rootProject.name = "sdkconsumer1"
-include(":app")
+include(":app",":testsdk1")
+project(":testsdk1").projectDir =  File("testsdk1")
  
