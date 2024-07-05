@@ -43,7 +43,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":testsdk1:sdk"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.22")
     implementation("androidx.core:core-ktx:1.10.1")
 }
