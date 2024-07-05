@@ -1,12 +1,25 @@
 package org.thvc.sdkconsumer1
 
-import android.app.Activity
 import android.os.Bundle
+import android.view.LayoutInflater
+import androidx.fragment.app.FragmentActivity
+import org.thvc.sdk.WebViewFragment
+import org.thvc.sdkconsumer1.databinding.MainActivityLayoutBinding
 
-class MainActivity : Activity() {
+class MainActivity : FragmentActivity() {
+
+    private lateinit var layoutBinding: MainActivityLayoutBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.layout_main)
+        layoutBinding = MainActivityLayoutBinding.inflate(LayoutInflater.from(this))
+        setContentView(layoutBinding.root)
+        loadFragment()
+    }
+
+    private fun loadFragment() {
+        supportFragmentManager.beginTransaction()
+            .add(layoutBinding.fragmentView.id, WebViewFragment())
+            .commit()
     }
 }
 
