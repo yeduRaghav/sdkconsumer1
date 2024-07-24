@@ -15,8 +15,14 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        maven(url = "https://tokbox.bintray.com/maven")
         maven(url = "https://plugins.gradle.org/m2/")
+        maven {
+            url = uri("https://maven.pkg.github.com/yeduRaghav/testsdk1")
+            credentials {
+                username = System.getenv("GITHUB_USERNAME")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
     }
 
     configurations.all {

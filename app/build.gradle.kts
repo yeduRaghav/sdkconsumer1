@@ -45,7 +45,7 @@ android {
 }
 
 dependencies {
-    implementation("org.thvc:sdk")
+    implementation("com.yeduRaghav:sdk:1.0.3")
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.22")
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.fragment:fragment-ktx:1.6.1")
